@@ -9,5 +9,12 @@
 import UIKit
 
 class MySwiftObject: NSObject {
-   
+    var someProperty: AnyObject = ""
+    
+    override init() {}
+    
+    func someFunction(someArg:AnyObject) -> String {
+        var returnVal = "Yes I got it.. \(someArg)"
+        return returnVal
+    }
 }

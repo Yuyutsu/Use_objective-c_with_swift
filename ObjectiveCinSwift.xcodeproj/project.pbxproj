@@ -13,6 +13,8 @@
 		1B62B5661AF74D1F0025BB73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B62B5651AF74D1F0025BB73 /* Images.xcassets */; };
 		1B62B5691AF74D1F0025BB73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B62B5671AF74D1F0025BB73 /* LaunchScreen.xib */; };
 		1B62B5751AF74D200025BB73 /* ObjectiveCinSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B62B5741AF74D200025BB73 /* ObjectiveCinSwiftTests.swift */; };
+		1B62B5811AF74D670025BB73 /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62B5801AF74D670025BB73 /* CustomObject.m */; };
+		1B62B5831AF74DE60025BB73 /* MySwiftObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B62B5821AF74DE60025BB73 /* MySwiftObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		1B62B56E1AF74D200025BB73 /* ObjectiveCinSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCinSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B62B5731AF74D200025BB73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B62B5741AF74D200025BB73 /* ObjectiveCinSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveCinSwiftTests.swift; sourceTree = "<group>"; };
+		1B62B57E1AF74D660025BB73 /* ObjectiveCinSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveCinSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		1B62B57F1AF74D670025BB73 /* CustomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomObject.h; sourceTree = "<group>"; };
+		1B62B5801AF74D670025BB73 /* CustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomObject.m; sourceTree = "<group>"; };
+		1B62B5821AF74DE60025BB73 /* MySwiftObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySwiftObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,10 @@
 				1B62B5651AF74D1F0025BB73 /* Images.xcassets */,
 				1B62B5671AF74D1F0025BB73 /* LaunchScreen.xib */,
 				1B62B55C1AF74D1F0025BB73 /* Supporting Files */,
+				1B62B57F1AF74D670025BB73 /* CustomObject.h */,
+				1B62B5801AF74D670025BB73 /* CustomObject.m */,
+				1B62B57E1AF74D660025BB73 /* ObjectiveCinSwift-Bridging-Header.h */,
+				1B62B5821AF74DE60025BB73 /* MySwiftObject.swift */,
 			);
 			path = ObjectiveCinSwift;
 			sourceTree = "<group>";
@@ -212,7 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B62B5831AF74DE60025BB73 /* MySwiftObject.swift in Sources */,
 				1B62B5611AF74D1F0025BB73 /* ViewController.swift in Sources */,
+				1B62B5811AF74D670025BB73 /* CustomObject.m in Sources */,
 				1B62B55F1AF74D1F0025BB73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,9 +354,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ObjectiveCinSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCinSwift/ObjectiveCinSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +367,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ObjectiveCinSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCinSwift/ObjectiveCinSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};

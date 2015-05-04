@@ -7,7 +7,17 @@
 //
 
 #import "CustomObject.h"
-
+#import "ObjectiveCinSwift-Swift.h"
 @implementation CustomObject
+
+- (void) someMethod {
+    NSLog(@"SomeMethod Ran");
+    MySwiftObject * myOb = [MySwiftObject new];
+    NSLog(@"MyOb.someProperty: %@", myOb.someProperty);
+    myOb.someProperty = @"Hello Swift, Objective-c here";
+    NSLog(@"MyOb.someProperty: %@", myOb.someProperty);
+    NSString * retString = [myOb someFunction:@"wait for me.."];
+    NSLog(@"RetString: %@", retString);
+}
 
 @end
